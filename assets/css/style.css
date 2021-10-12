@@ -85,7 +85,7 @@
 }
 
 .slide-show {
-    background: url("/assets/img/chicago.jpg") no-repeat;
+    background: url("../img/chicago.jpg") no-repeat;
     background-size: 100%;
     background-origin: padding-box;
     padding-top: 50%;
