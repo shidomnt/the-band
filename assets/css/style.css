@@ -1,0 +1,348 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.ti-angle-down {
+    font-size: 10px;
+}
+
+.container {
+    width: 100;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: 46px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.header-nav-list {
+    list-style-type: none;
+    overflow: hidden;
+    height: inherit;
+}
+
+.header-nav-item a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header-nav-item {
+    float: left;
+    color: white;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.header-nav-item:hover {
+    color: black;
+    background-color: #ccc;
+}
+
+.header-nav-item.search-btn {
+    float: right;
+    cursor: pointer;
+}
+
+.header-nav-item.search-btn:hover {
+    background-color: red;
+    color: white;
+}
+
+.header-nav-item .sub-nav-list {
+    width: 10rem;
+    list-style-type: none;
+    position: absolute;
+    top: 46px;
+    left: 374px;
+    background-color: white;
+    text-transform: none;
+    display: none;
+}
+
+.header-nav-item .sub-nav-item {
+    color: black;
+    padding: 13px;
+}
+
+.header-nav-item .sub-nav-item:hover {
+    background: #ccc;
+}
+
+.header-nav-item.sub-nav:hover .sub-nav-list {
+    display: unset;
+}
+
+.content {
+    margin-top: 46px;
+}
+
+.slide-show {
+    background: url("/assets/img/chicago.jpg") no-repeat;
+    background-size: 100%;
+    background-origin: padding-box;
+    padding-top: 50%;
+    position: relative;
+}
+
+.slide-show .slide-image {
+    width: 100%;
+}
+
+.slide-show .slide-text {
+    width: 100%;
+    color: white;
+    position: absolute;
+    top: 80%;
+    text-align: center;
+    font-size: 15px;
+}
+
+.slide-show .slide-text-header {
+    font-weight: 500;
+}
+
+.slide-show .slide-text-description {
+    margin: 20px 0px;
+    font-weight: bold;
+}
+
+
+/* .main-content {} */
+
+.main-content>div {
+    padding: 64px 0px;
+}
+
+.main-content-header {
+    text-align: center;
+}
+
+.main-content-header h1 {
+    letter-spacing: 4px;
+    font-weight: 400px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.main-content-header p {
+    margin: 25px 0px;
+    opacity: 0.7;
+}
+
+.the-band {
+    color: black;
+}
+
+.the-band-description {
+    text-align: justify;
+    margin: 0px auto;
+    width: 60%;
+    line-height: 1.4;
+}
+
+.the-band-member {
+    width: 60%;
+    margin: 0px auto;
+    margin-top: 60px;
+}
+
+.the-band-member .member-list {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.the-band-member .member-item {
+    width: calc(100%/3);
+    float: left;
+    text-align: center;
+}
+
+.the-band-member .member-item .member-name {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.the-band-member .member-item .member-img {
+    width: 60%;
+    border-radius: 5px;
+}
+
+.tour-content {
+    max-width: 800px;
+    margin: 0px auto;
+}
+
+.tour-dates {
+    background-color: black;
+    color: white;
+}
+
+.tour-month-list {
+    list-style-type: none;
+}
+
+.tour-month-item {
+    padding: 10px 15px;
+    background-color: white;
+    color: #777;
+    border-bottom: 1px solid #ddd;
+}
+
+.sold-out {
+    color: white;
+    background-color: red;
+    margin-left: 20px;
+    padding: 3px 5px;
+}
+
+.on-stock {
+    float: right;
+    margin-right: 20px;
+    color: white;
+    border-radius: 20px;
+    background-color: black;
+    padding: 2px 7px;
+}
+
+.tour-location-list {
+    margin: 30px -11px 0px;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: black;
+}
+
+.tour-locaiton-item {
+    width: calc(100%/3);
+    float: left;
+    background-color: white;
+    background-clip: content-box;
+    color: black;
+    padding: 0px 10px;
+    font-size: 14px;
+}
+
+.tour-img {
+    width: 100%;
+}
+
+.tour-text {
+    padding: 15px;
+    line-height: 1.5;
+}
+
+
+/* .tour-text .tour-name {} */
+
+.tour-text .tour-time {
+    margin: 20px 0px;
+    opacity: 0.6;
+}
+
+.tour-text .tour-descrip {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.tour-text .buy-ticket {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+
+/* .contact {} */
+
+.contact-content {
+    max-width: 800px;
+    margin: 40px auto 0px;
+    overflow: hidden;
+}
+
+.contact-info-list {
+    width: 49%;
+    float: left;
+    list-style-type: none;
+}
+
+.contact-info-item {
+    padding: 5px 0px;
+}
+
+.contact-info-item span {
+    padding-left: 10px;
+}
+
+.contact-form {
+    width: 50%;
+    float: right;
+}
+
+.contact-form input {
+    border: 1px solid #ccc
+}
+
+.contact-form input[name="name"],
+.contact-form input[name="email"] {
+    width: 49%;
+    padding: 10px 10px;
+}
+
+.contact-form input[name="message"] {
+    width: 99%;
+    padding: 10px 10px;
+    margin-top: 10px;
+}
+
+.contact-form button[type="submit"] {
+    float: right;
+    margin: 15px 1% 0px;
+    padding: 13px 20px;
+    color: white;
+    background-color: black;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form button[type="submit"]:hover {
+    color: black;
+    background-color: #ccc;
+}
+
+.map img {
+    width: 100%;
+    filter: grayscale(50%);
+}
+
+.footer {
+    text-align: center;
+    color: #777;
+}
+
+.footer .icon {
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+
+.footer .icon i:hover {
+    opacity: 0.6;
+}
+
+.footer .source {
+    margin-bottom: 70px;
+    font-size: 14px;
+}
+
+.footer .source a {
+    color: inherit;
+}
