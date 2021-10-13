@@ -143,16 +143,17 @@
     color: black;
 }
 
+.the-band-content {
+    max-width: 800px;
+    margin: 0px auto;
+}
+
 .the-band-description {
     text-align: justify;
-    margin: 0px auto;
-    width: 60%;
     line-height: 1.4;
 }
 
 .the-band-member {
-    width: 60%;
-    margin: 0px auto;
     margin-top: 60px;
 }
 
@@ -233,6 +234,10 @@
 
 .tour-img {
     width: 100%;
+}
+
+.tour-img:hover {
+    opacity: 0.6;
 }
 
 .tour-text {
