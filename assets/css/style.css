@@ -258,12 +258,135 @@
     font-size: 14px;
 }
 
-.tour-text .buy-ticket {
+.tour-text .buy-ticket-btn {
     display: inline-block;
     background-color: black;
     color: white;
     padding: 10px 15px;
     text-decoration: none;
+    cursor: pointer;
+}
+
+.tour-text .buy-ticket-btn:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
+.buy-ticket.layout {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+
+.open {
+    display: unset !important;
+}
+
+@keyframes showLayout {
+    from {
+        transform: translateY(-70px);
+        opacity: 0.4;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.layout-container {
+    width: 900px;
+    max-width: calc(100% - 32px);
+    background-color: white;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 7px #000;
+    animation: showLayout 0.4s;
+}
+
+@keyframes showLayout {
+    from {
+        transform: translate(-50%, -80%);
+        opacity: 0.4;
+    }
+    to {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+.header-close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    font-size: 13px;
+    cursor: pointer;
+    color: white;
+}
+
+.layout-header {
+    width: 100%;
+    text-align: center;
+    padding: 50px 40px;
+    background-color: #009688;
+    color: white;
+    font-size: 25px;
+    letter-spacing: 5px;
+}
+
+.layout-content,
+.layout-footer {
+    padding: 15px;
+}
+
+.layout-form input {
+    width: 100%;
+    padding: 13px 10px;
+    margin: 10px 0px 20px;
+    border: 1px solid #ccc;
+}
+
+.layout-form button {
+    width: 100%;
+    padding: 20px 0px;
+    color: white;
+    background-color: #009688;
+    border: none;
+    text-transform: uppercase;
+}
+
+.layout-footer {
+    overflow: hidden;
+}
+
+.footer-close-btn {
+    float: left;
+    background-color: red;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.footer-close-btn .ti-close-footer {
+    font-size: 10px;
+}
+
+.footer-text {
+    float: right;
+}
+
+.header-close-btn:hover,
+.layout-form button:hover,
+.footer-close-btn:hover {
+    color: black;
+    background-color: #ccc;
 }
 
 
@@ -339,6 +462,11 @@
 .footer .icon {
     margin-bottom: 25px;
     font-size: 22px;
+}
+
+.footer .icon a {
+    color: unset;
+    text-decoration: unset;
 }
 
 .footer .icon i:hover {
