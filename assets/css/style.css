@@ -30,11 +30,6 @@ input {
     font-size: 10px;
 }
 
-.container {
-    width: 100;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 .row {
     margin-left: -8px;
     margin-right: -8px;
@@ -62,6 +57,13 @@ input {
     left: 0;
     right: 0;
 }
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.container {}
 
 .header {
     height: 46px;
@@ -349,13 +351,14 @@ input {
     border: 1px solid #ccc;
 }
 
-.layout-form button {
+.layout-form button[type="submit"] {
     width: 100%;
     padding: 20px 0px;
     color: white;
     background-color: #009688;
     border: none;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .layout-footer {
@@ -376,6 +379,12 @@ input {
 
 .footer-text {
     float: right;
+    padding-top: 20px;
+}
+
+.footer-text a {
+    color: violet;
+    text-decoration: underline;
 }
 
 .header-close-btn:hover,
@@ -441,7 +450,6 @@ input {
     font-size: 14px;
 }
 
-.footer-text a {
-    color: violet;
+.footer .source a {
     text-decoration: underline;
 }
