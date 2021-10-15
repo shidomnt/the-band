@@ -4,6 +4,28 @@
     box-sizing: border-box;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+input {
+    padding: 10px 10px;
+    width: 100%;
+}
+
+.text-center {
+    text-align: center !important
+}
+
+.box-shadow {
+    box-shadow: 0 0 7px #444 !important
+}
+
 .ti-angle-down {
     font-size: 10px;
 }
@@ -13,29 +35,47 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.header {
-    width: 100%;
-    height: 46px;
-    background-color: black;
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+    overflow: hidden;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-3 {
+    width: calc(100%/3);
+}
+
+.col-2 {
+    width: calc(100%/2);
+}
+
+.fixed {
     position: fixed;
     top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.header {
+    height: 46px;
+    background-color: black;
+    bottom: unset;
     z-index: 1;
-    box-shadow: 0 0 5px #222;
 }
 
 .header-nav-list {
-    list-style-type: none;
     overflow: hidden;
     height: inherit;
 }
 
-.header-nav-item a {
-    color: inherit;
-    text-decoration: none;
-}
-
 .header-nav-item {
-    float: left;
     color: white;
     padding: 15px 20px;
     text-transform: uppercase;
@@ -59,14 +99,12 @@
 
 .header-nav-item .sub-nav-list {
     min-width: 10rem;
-    list-style-type: none;
     position: absolute;
     top: 100%;
     left: 374px;
     background-color: white;
     text-transform: none;
     display: none;
-    box-shadow: 0 0 10px #444;
 }
 
 .header-nav-item .sub-nav-item {
@@ -139,48 +177,30 @@
     opacity: 0.7;
 }
 
-.the-band {
-    color: black;
+.main-content-container {
+    width: 800px;
+    max-width: calc(100% - 32px);
+    margin: auto;
+    overflow: hidden;
 }
 
-.the-band-content {
-    max-width: 800px;
-    margin: 0px auto;
+.the-band {
+    color: black;
 }
 
 .the-band-description {
     text-align: justify;
     line-height: 1.4;
+    margin-bottom: 60px;
 }
 
-.the-band-member {
-    margin-top: 60px;
-}
-
-.the-band-member .member-list {
-    list-style-type: none;
-    overflow: hidden;
-}
-
-.the-band-member .member-item {
-    width: calc(100%/3);
-    float: left;
-    text-align: center;
-}
-
-.the-band-member .member-item .member-name {
-    text-align: center;
+.member-name {
     margin-bottom: 15px;
 }
 
-.the-band-member .member-item .member-img {
+.member-img {
     width: 60%;
     border-radius: 5px;
-}
-
-.tour-content {
-    max-width: 800px;
-    margin: 0px auto;
 }
 
 .tour-dates {
@@ -189,7 +209,7 @@
 }
 
 .tour-month-list {
-    list-style-type: none;
+    margin-bottom: 30px;
 }
 
 .tour-month-item {
@@ -216,24 +236,18 @@
 }
 
 .tour-location-list {
-    margin: 30px -11px 0px;
-    list-style-type: none;
-    overflow: hidden;
     background-color: black;
 }
 
-.tour-locaiton-item {
-    width: calc(100%/3);
-    float: left;
-    background-color: white;
-    background-clip: content-box;
+.tour-location-item {
     color: black;
-    padding: 0px 10px;
+    padding: 0px 8px;
     font-size: 14px;
 }
 
 .tour-img {
     width: 100%;
+    vertical-align: bottom;
 }
 
 .tour-img:hover {
@@ -243,6 +257,7 @@
 .tour-text {
     padding: 15px;
     line-height: 1.5;
+    background-color: white;
 }
 
 
@@ -273,11 +288,6 @@
 }
 
 .buy-ticket.layout {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     z-index: 10;
     background-color: rgba(0, 0, 0, 0.4);
     display: none;
@@ -285,17 +295,6 @@
 
 .open {
     display: unset !important;
-}
-
-@keyframes showLayout {
-    from {
-        transform: translateY(-70px);
-        opacity: 0.4;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
 }
 
 .layout-container {
@@ -306,7 +305,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 0 7px #000;
     animation: showLayout 0.4s;
 }
 
@@ -347,8 +345,6 @@
 }
 
 .layout-form input {
-    width: 100%;
-    padding: 13px 10px;
     margin: 10px 0px 20px;
     border: 1px solid #ccc;
 }
@@ -389,21 +385,6 @@
     background-color: #ccc;
 }
 
-
-/* .contact {} */
-
-.contact-content {
-    max-width: 800px;
-    margin: 40px auto 0px;
-    overflow: hidden;
-}
-
-.contact-info-list {
-    width: 49%;
-    float: left;
-    list-style-type: none;
-}
-
 .contact-info-item {
     padding: 5px 0px;
 }
@@ -412,30 +393,17 @@
     padding-left: 10px;
 }
 
-.contact-form {
-    width: 50%;
-    float: right;
-}
-
 .contact-form input {
     border: 1px solid #ccc
 }
 
-.contact-form input[name="name"],
-.contact-form input[name="email"] {
-    width: 49%;
-    padding: 10px 10px;
-}
-
 .contact-form input[name="message"] {
-    width: 99%;
-    padding: 10px 10px;
     margin-top: 10px;
 }
 
 .contact-form button[type="submit"] {
     float: right;
-    margin: 15px 1% 0px;
+    margin: 15px 0px;
     padding: 13px 20px;
     color: white;
     background-color: black;
@@ -464,11 +432,6 @@
     font-size: 22px;
 }
 
-.footer .icon a {
-    color: unset;
-    text-decoration: unset;
-}
-
 .footer .icon i:hover {
     opacity: 0.6;
 }
@@ -478,6 +441,7 @@
     font-size: 14px;
 }
 
-.footer .source a {
-    color: inherit;
+.footer-text a {
+    color: violet;
+    text-decoration: underline;
 }
