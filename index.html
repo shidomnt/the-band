@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/img/icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/font/themify-icons/themify-icons.css">
     <title>The Band</title>
 </head>
@@ -50,13 +51,14 @@
                 </div>
             </div>
         </div>
-        <div class="header box-shadow fixed">
+        <div class="header header-height box-shadow fixed js-header">
             <ul class="header-nav-list">
-                <li class="header-nav-item col"><a href="#">Home</a></li>
-                <li class="header-nav-item col"><a href="#band">Band</a></li>
-                <li class="header-nav-item col"><a href="#tour">Tour</a></li>
-                <li class="header-nav-item col"><a href="#contact">Contact</a></li>
-                <li class="header-nav-item col sub-nav">
+                <li class="header-nav-item js-header-nav-item"><a href="#">Home</a></li>
+                <li class="header-nav-item js-header-nav-item"><a href="#band">Band</a></li>
+                <li class="header-nav-item js-header-nav-item"><a href="#tour">Tour</a></li>
+                <li class="header-nav-item js-header-nav-item"><a href="#contact">Contact</a></li>
+                <li class="header-nav-item js-header-nav-item hidden-pc hidden-tablet"><a href="#">Merch</a></li>
+                <li class="header-nav-item js-header-nav-item sub-nav hidden-mobile">
                     <span>More</span>
                     <i class="ti-angle-down"></i>
                     <ul class="sub-nav-list box-shadow">
@@ -65,8 +67,9 @@
                         <li class="sub-nav-item"><a href="#">Media</a></li>
                     </ul>
                 </li>
-                <li class="header-nav-item search-btn"><i class="ti-search"></i></li>
+                <li class="header-nav-item js-header-nav-item search-btn hidden-mobile"><i class="ti-search"></i></li>
             </ul>
+            <div class="sub-nav-btn-mobile js-sub-nav-btn-mobile hidden-pc hidden-tablet"><i class="ti-menu"></i></div>
         </div>
         <div class="content">
             <div class="slide-show">
@@ -92,15 +95,15 @@
                             est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         </p>
                         <ul class="row">
-                            <li class="text-center col col-3">
+                            <li class="member-item text-center col col-3">
                                 <p class="member-name">Name</p>
                                 <img src="assets/img/bandmember.jpg" alt="" class="member-img">
                             </li>
-                            <li class="text-center col col-3">
+                            <li class="member-item text-center col col-3">
                                 <p class="member-name">Name</p>
                                 <img src="assets/img/bandmember.jpg" alt="" class="member-img">
                             </li>
-                            <li class="text-center col col-3">
+                            <li class="member-item text-center col col-3">
                                 <p class="member-name">Name</p>
                                 <img src="assets/img/bandmember.jpg" alt="" class="member-img">
                             </li>
@@ -165,7 +168,7 @@
                         </p>
                     </div>
                     <div class="main-content-container">
-                        <ul class="col col-2">
+                        <ul class="contact-list col col-2">
                             <li class="contact-info-item">
                                 <i class="ti-location-pin"></i>
                                 <span>Chicago, US</span>
@@ -223,32 +226,62 @@
         </div>
     </div>
     <script>
-        const openbtns = document.querySelectorAll('.js-buy-ticket-btn')
-        const closebtns = document.querySelectorAll('.js-cls-btn')
-        const buyticket_layout = document.querySelector('.js-buy-ticket-layout')
-        const Layoutcontainer = document.querySelector('.js-layout-container')
+        // Buy Ticket
+        const openbtns = document.querySelectorAll('.js-buy-ticket-btn');
+        const closebtns = document.querySelectorAll('.js-cls-btn');
+        const buyticket_layout = document.querySelector('.js-buy-ticket-layout');
+        const Layoutcontainer = document.querySelector('.js-layout-container');
 
         function showLayout() {
-            buyticket_layout.classList.add('open')
+            buyticket_layout.classList.add('open');
         }
 
         function closeLayout() {
-            buyticket_layout.classList.remove('open')
+            buyticket_layout.classList.remove('open');
         }
 
         for (const openbtn of openbtns) {
-            openbtn.addEventListener('click', showLayout)
+            openbtn.addEventListener('click', showLayout);
         }
 
         for (const closebtn of closebtns) {
-            closebtn.addEventListener('click', closeLayout)
+            closebtn.addEventListener('click', closeLayout);
         }
 
-        buyticket_layout.addEventListener('click', closeLayout)
+        buyticket_layout.addEventListener('click', closeLayout);
 
         Layoutcontainer.addEventListener('click', function(even) {
-            even.stopPropagation()
+            even.stopPropagation();
         })
+    </script>
+    <script>
+        //Navbar on mobile
+        var subnavMobileBtn = document.querySelector('.js-sub-nav-btn-mobile');
+        var header = document.querySelector('.js-header');
+        const subnavMobileItems = document.querySelectorAll('.js-header-nav-item');
+
+        function removeHeight() {
+            header.classList.remove('header-height');
+        }
+
+        function addHeight() {
+            header.classList.add('header-height');
+        }
+        subnavMobileBtn.addEventListener('click', function() {
+            if (header.clientHeight == 46) {
+                removeHeight();
+            } else {
+                addHeight();
+            }
+        })
+
+        for (const subnavMobileItem of subnavMobileItems) {
+            subnavMobileItem.addEventListener('click', function() {
+                if (header.clientHeight != 46) {
+                    addHeight();
+                }
+            })
+        }
     </script>
 </body>
 
