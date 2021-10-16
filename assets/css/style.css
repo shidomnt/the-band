@@ -74,11 +74,12 @@ html {
 }
 
 .header-nav-list {
-    overflow: hidden;
+    /* overflow: hidden; */
     height: inherit;
 }
 
 .header-nav-item {
+    position: relative;
     float: left;
     color: white;
     padding: 15px 20px;
@@ -110,7 +111,7 @@ html {
     min-width: 10rem;
     position: absolute;
     top: 100%;
-    left: 374px;
+    left: 0%;
     background-color: white;
     text-transform: none;
     display: none;
