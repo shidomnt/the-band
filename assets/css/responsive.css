@@ -69,4 +69,16 @@
         background-color: #222;
         color: white;
     }
+    .layout-container {
+        transform: translate(-50%, -45%);
+    }
+    .layout-header {
+        padding: 2rem 0px;
+    }
+    .layout-form button[type="submit"] {
+        padding: 1rem 0px;
+    }
+    .layout-footer {
+        padding: 10px 15px;
+    }
 }
