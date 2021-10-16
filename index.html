@@ -57,16 +57,18 @@
                 <li class="header-nav-item js-header-nav-item"><a href="#band">Band</a></li>
                 <li class="header-nav-item js-header-nav-item"><a href="#tour">Tour</a></li>
                 <li class="header-nav-item js-header-nav-item"><a href="#contact">Contact</a></li>
-                <li class="header-nav-item js-header-nav-item hidden-pc hidden-tablet"><a href="#">Merch</a></li>
-                <li class="header-nav-item js-header-nav-item sub-nav hidden-mobile">
+                <li class="header-nav-item js-header-nav-item sub-nav js-sub-nav-btn hidden-mobile">
                     <span>More</span>
                     <i class="ti-angle-down"></i>
-                    <ul class="sub-nav-list box-shadow">
+                    <ul id="sub-nav" class="sub-nav-list box-shadow js-sub-nav-list">
                         <li class="sub-nav-item"><a href="#">Merchandise</a></li>
                         <li class="sub-nav-item"><a href="#">Extras</a></li>
                         <li class="sub-nav-item"><a href="#">Media</a></li>
                     </ul>
                 </li>
+                <li class="header-nav-item js-header-nav-item hidden-pc hidden-tablet"><a href="#">Merchandise</a></li>
+                <li class="header-nav-item js-header-nav-item hidden-pc hidden-tablet"><a href="#">Extras</a></li>
+                <li class="header-nav-item js-header-nav-item hidden-pc hidden-tablet"><a href="#">Media</a></li>
                 <li class="header-nav-item js-header-nav-item search-btn hidden-mobile"><i class="ti-search"></i></li>
             </ul>
             <div class="sub-nav-btn-mobile js-sub-nav-btn-mobile hidden-pc hidden-tablet"><i class="ti-menu"></i></div>
@@ -257,23 +259,30 @@
     <script>
         //Navbar on mobile
         var header = document.getElementById('header');
-        var subnavMobileBtn = document.querySelector('.js-sub-nav-btn-mobile');
-        const subnavMobileItems = document.querySelectorAll('.js-header-nav-item');
-        // var header = document.querySelector('.js-header');
+        var openNavBarBtn = document.querySelector('.js-sub-nav-btn-mobile');
+        const navMobileItems = document.querySelectorAll('.js-header-nav-item a');
+        var headerHeight = header.clientHeight;
 
-        subnavMobileBtn.addEventListener('click', function() {
-            if (header.clientHeight == 46) {
-                header.style.height = 'auto';
+        function closeNavBar() {
+            header.style.height = null;
+        }
+
+        function openNavBar() {
+            header.style.height = 'auto';
+        }
+
+        openNavBarBtn.addEventListener('click', function() {
+            if (header.clientHeight == headerHeight) {
+                openNavBar();
             } else {
-                header.style.height = '46px';
+                closeNavBar();
             }
         })
 
-        for (const subnavMobileItem of subnavMobileItems) {
-            subnavMobileItem.addEventListener('click', function() {
-                if (header.clientHeight != 46) {
-                    header.style.height = '46px';
-                }
+        //Bam chon thi an di nav bar
+        for (const navMobileItem of navMobileItems) {
+            navMobileItem.addEventListener('click', function(event) {
+                closeNavBar();
             })
         }
     </script>

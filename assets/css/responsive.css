@@ -27,6 +27,9 @@
         float: unset;
         margin-bottom: 30px;
     }
+    .header {
+        /* overflow: hidden; */
+    }
     .header-nav-item {
         float: unset;
     }
@@ -52,5 +55,15 @@
     }
     .contact-form .col {
         margin-bottom: 5px;
+    }
+    .header-nav-item .sub-nav-list {
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+    .header-nav-item .sub-nav-item {
+        background-color: #222;
+        color: white;
     }
 }
