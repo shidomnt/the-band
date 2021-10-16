@@ -7,11 +7,25 @@
 }
 
 
+/* Tablet and mobile */
+
+@media (max-width:1023px) {}
+
+
 /* Tablet */
 
 @media (min-width:740px) and (max-width:1023px) {
     .hidden-tablet {
         display: none;
+    }
+    .footer .icon {
+        font-size: 36px;
+    }
+    .footer .icon a {
+        margin: 0px 8px;
+    }
+    .footer .source a {
+        padding: 15px 0px;
     }
 }
 
@@ -80,5 +94,8 @@
     }
     .layout-footer {
         padding: 10px 15px;
+    }
+    .contact-form button[type="submit"] {
+        width: 100%;
     }
 }
