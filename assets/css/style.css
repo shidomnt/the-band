@@ -67,7 +67,8 @@ html {
     scroll-behavior: smooth;
 }
 
-.container {}
+
+/* .container {} */
 
 .header {
     background-color: black;
