@@ -58,10 +58,6 @@ input {
     right: 0;
 }
 
-.header-height {
-    height: 46px;
-}
-
 html {
     font-family: Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
@@ -74,6 +70,7 @@ html {
     background-color: black;
     bottom: unset;
     z-index: 1;
+    height: 46px;
 }
 
 .header-nav-list {

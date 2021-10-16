@@ -51,7 +51,7 @@
                 </div>
             </div>
         </div>
-        <div class="header header-height box-shadow fixed js-header">
+        <div id="header" class="header header-height box-shadow fixed js-header">
             <ul class="header-nav-list">
                 <li class="header-nav-item js-header-nav-item"><a href="#">Home</a></li>
                 <li class="header-nav-item js-header-nav-item"><a href="#band">Band</a></li>
@@ -256,29 +256,23 @@
     </script>
     <script>
         //Navbar on mobile
+        var header = document.getElementById('header');
         var subnavMobileBtn = document.querySelector('.js-sub-nav-btn-mobile');
-        var header = document.querySelector('.js-header');
         const subnavMobileItems = document.querySelectorAll('.js-header-nav-item');
+        // var header = document.querySelector('.js-header');
 
-        function removeHeight() {
-            header.classList.remove('header-height');
-        }
-
-        function addHeight() {
-            header.classList.add('header-height');
-        }
         subnavMobileBtn.addEventListener('click', function() {
             if (header.clientHeight == 46) {
-                removeHeight();
+                header.style.height = 'auto';
             } else {
-                addHeight();
+                header.style.height = '46px';
             }
         })
 
         for (const subnavMobileItem of subnavMobileItems) {
             subnavMobileItem.addEventListener('click', function() {
                 if (header.clientHeight != 46) {
-                    addHeight();
+                    header.style.height = '46px';
                 }
             })
         }
